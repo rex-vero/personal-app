@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: main;
+  src: url('../font/adobemingstd-light.otf');
+}
+
+html {
+  font-family: main;
+  scroll-behavior: smooth;
+}
