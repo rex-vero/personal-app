@@ -1,14 +1,12 @@
-import { Avatar, Divider, Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import SideLinks from "./SideLinks";
+import SideHead from "./SideHead";
 
 const Sidebar = () => {
     return (
-        <Box display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'5px'} textAlign={'center'} mt={2}>
-            <Avatar sx={{ height: 100, width: 100 }} src={require('../../assets/images/logo.jpg')} />
-            <Typography>Mohammad Amin Ahmadi</Typography>
-            <Typography variant="caption">Front-End Developer</Typography>
-            <Divider variant="middle" sx={{ width: 140 }} >
-                <Typography variant="subtitle1">text</Typography>
-            </Divider>
+        <Box position={'sticky'} top={16} display={'flex'} flexDirection={'column'} alignItems={'center'} gap={'5px'} textAlign={'center'} mt={2}>
+            <SideHead />
+            <SideLinks />
         </Box>
     );
 }
