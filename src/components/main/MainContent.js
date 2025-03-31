@@ -1,10 +1,11 @@
-import { Stack } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import { useContext, useLayoutEffect } from 'react';
 import TabPanel from './TabPanel';
 import DataContext from '../../contexts/DataContext';
+import DrawerTabs from '../drawer/DrawerTabs';
 
 const MainContent = () => {
-    const { value } = useContext(DataContext);
+    const { value, open, setOpen } = useContext(DataContext);
     useLayoutEffect(() => {
         document.title = 'Personal App';
     }, [])
@@ -22,6 +23,8 @@ const MainContent = () => {
             <TabPanel value={value} index={3}>
                 Item 4
             </TabPanel>
+            <Button sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} onClick={() => setOpen(true)}>click</Button>
+            <DrawerTabs drawerOpen={open} />
         </Stack>
     );
 }

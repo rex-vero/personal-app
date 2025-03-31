@@ -6,8 +6,8 @@ const SideHead = () => {
             <Avatar sx={{ height: 100, width: 100 }} alt="Mohammad Amin" src={require('../../assets/images/mohammad-amin .jpg')} >MA</Avatar>
             <Typography>Mohammad Amin Ahmadi</Typography>
             <Typography variant="caption">Front-End Developer</Typography>
-            <Divider variant="middle" sx={{ width: 180 }} >
-                <Typography fontSize={12} variant="subtitle1">Always Learning</Typography>
+            <Divider variant="middle" sx={{ width: 240 }} >
+                <Typography fontSize={12} px={1} variant="subtitle1">Always Learning</Typography>
             </Divider>
         </Stack>
     );
