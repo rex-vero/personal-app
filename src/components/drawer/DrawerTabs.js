@@ -6,7 +6,7 @@ import DataContext from "../../contexts/DataContext";
 const DrawerTabs = ({ drawerOpen }) => {
     const { setOpen } = useContext(DataContext);
     return (
-        <SwipeableDrawer open={drawerOpen} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
+        <SwipeableDrawer transitionDuration={500} open={drawerOpen} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
             <Box role="presentation" onClick={() => setOpen(false)}>
                 <Sidebar />
             </Box>
