@@ -6,7 +6,7 @@ import DataContext from "../../contexts/DataContext";
 const Navbar = () => {
     const { setOpen } = useContext(DataContext);
     return (
-        <AppBar sx={{ display: { xs: 'block', sm: 'block', md: 'none' } }} position="sticky">
+        <AppBar sx={{ display: { xs: 'block', md: 'none' } }} position="sticky">
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Typography>Live Your Dreams</Typography>
                 <Fab sx={{ m: 1 }} size="small" aria-label="menu" onClick={() => setOpen(true)}>
