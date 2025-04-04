@@ -4,6 +4,10 @@ import TabPanel from '../../helpers/TabPanel';
 import DataContext from '../../contexts/DataContext';
 import DrawerTabs from '../drawer/DrawerTabs';
 import Navbar from './Navbar';
+import Home from '../../pages/Home';
+import About from '../../pages/About';
+import Resume from '../../pages/Resume';
+import Contact from '../../pages/Contact';
 
 const MainContent = () => {
     const { value, open } = useContext(DataContext);
@@ -16,16 +20,16 @@ const MainContent = () => {
             <DrawerTabs drawerOpen={open} />
             <Stack alignItems={'center'} display={'flex'} >
                 <TabPanel value={value} index={0}>
-                    Item 1
+                    <Home />
                 </TabPanel>
                 <TabPanel value={value} index={1}>
-                    Item 2
+                    <About />
                 </TabPanel>
                 <TabPanel value={value} index={2}>
-                    Item 3
+                    <Resume />
                 </TabPanel>
                 <TabPanel value={value} index={3}>
-                    Item 4
+                    <Contact />
                 </TabPanel>
             </Stack>
         </>

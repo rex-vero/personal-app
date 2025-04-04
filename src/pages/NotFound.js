@@ -1,21 +1,11 @@
-import { Box, Button, Typography, keyframes } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { grey } from "@mui/material/colors";
 import { useLayoutEffect } from "react";
 import { TbArrowBackUp } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import { floatAnimation } from "../helpers/Animations";
 
 const NotFound = () => {
-    const floatAnimation = keyframes`
-0% {
-  transform: translateY(0);
-}
-50% {
-  transform: translateY(-10px);
-}
-100% {
-  transform: translateY(0);
-}
-`;
     useLayoutEffect(() => {
         document.title = 'Page Not Found';
         document.body.style.overflow = 'hidden';
