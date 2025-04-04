@@ -15,7 +15,7 @@ const SideLinks = () => {
         sx: { '&.MuiTab-root': { 'm': 1, 'borderRadius': 2, 'backgroundColor': { 'xs': grey[800], 'md': grey[500] } } }
     });
     return (
-        <Tabs textColor='secondary' value={value} onChange={(_, tabNewValue) => setValue(tabNewValue)} orientation='vertical' variant='scrollable' scrollButtons allowScrollButtonsMobile>
+        <Tabs textColor='secondary' value={value} onChange={(_, tabNewValue) => setValue(tabNewValue)} orientation='vertical' sx={{ mt: 5 }}>
             <Tab label={<Typography fontSize={13}>Home</Typography>} icon={<IoHome fontSize={24} />} {...tabProps(0)} />
             <Tab label={<Typography fontSize={13}>About Me</Typography>} icon={<IoPerson fontSize={24} />} {...tabProps(1)} />
             <Tab label={<Typography fontSize={13}>Resume</Typography>} icon={<PiPaperclipLight fontSize={24} />} {...tabProps(2)} />
