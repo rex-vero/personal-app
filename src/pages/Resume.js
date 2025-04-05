@@ -5,7 +5,7 @@ import { grey } from "@mui/material/colors";
 const Resume = () => {
     return (
         <Box>
-            <ParticlesContainer animationType={'link'} particleColor={grey[700]} />
+            <ParticlesContainer animationType={'link'} numParticles={35} particleColor={grey[700]} />
             hi
         </Box>
     );
