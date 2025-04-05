@@ -1,6 +1,13 @@
+import { Box } from "@mui/material";
+import ParticlesContainer from "../helpers/ParticlesContainer";
+import { grey } from "@mui/material/colors";
+
 const Resume = () => {
     return (
-        <>Resume</>
+        <Box>
+            <ParticlesContainer animationType={'link'} particleColor={grey[700]} />
+            hi
+        </Box>
     );
 }
 

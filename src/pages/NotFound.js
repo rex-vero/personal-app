@@ -1,9 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
-import { grey } from "@mui/material/colors";
+import { cyan, grey } from "@mui/material/colors";
 import { useLayoutEffect } from "react";
 import { TbArrowBackUp } from "react-icons/tb";
 import { Link } from "react-router-dom";
 import { floatAnimation } from "../helpers/Animations";
+import ParticlesContainer from "../helpers/ParticlesContainer";
 
 const NotFound = () => {
     useLayoutEffect(() => {
@@ -13,6 +14,7 @@ const NotFound = () => {
     }, [])
     return (
         <Box height={'100vh'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
+            <ParticlesContainer animationType={'error'} particleColor={cyan[700]} />
             <Box boxShadow={'0 0 10px black'} borderRadius={4} display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{ backgroundColor: grey[900], p: 3, m: 2, animation: `${floatAnimation} 2s ease-in-out infinite` }}>
                 <Box>
                     <Typography variant="h3" color="textPrimary">OOPS 404 ERROR!</Typography>
