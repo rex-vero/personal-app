@@ -7,7 +7,7 @@ const Home = () => {
     return (
         <Box>
             <ParticlesContainer particleColor={blue[50]} animationType={'snow'} />
-            <Typing loop strings={['hello', 'how are you?']} typeSpeed={50} backDelay={20} backSpeed={25} />
+            <Typing style={{ color: '#fff' }} loop strings={['hello', 'how are you?']} typeSpeed={50} backDelay={20} backSpeed={25} />
         </Box>
     );
 }
