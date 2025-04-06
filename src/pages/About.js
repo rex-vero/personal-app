@@ -10,7 +10,7 @@ const About = () => {
             <ParticlesContainer particleColor={green[900]} animationType={'number'} />
             <Grid sx={{ flexDirection: 'column' }} container>
                 <Typography variant="body1" color="#fff">
-                    <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={20} />
+                    <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={5} />
                 </Typography>
                 <Divider sx={{ mt: 5 }} />
                 <Typography mt={5} variant="body1" color="#fff">
