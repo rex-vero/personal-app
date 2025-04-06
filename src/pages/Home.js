@@ -10,7 +10,7 @@ const Home = () => {
             <Typography color={grey[50]} sx={{ fontSize: { xs: '1.5rem', md: '3rem' } }}>
                 <Typing strings={['[{ "Mohammad Amin Ahmadi" }]']} typeSpeed={200} />
             </Typography>
-            <Typography sx={{ fontSize: { xs: '1.2rem', md: '1.8rem' } }} color={green[800]}>
+            <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.8rem' }, textDecoration: 'underline', textDecorationColor: green[900] }} color={green[800]}>
                 <Typing loop strings={["I'm Front-End Developer", "I'm Programer", "I'm Always Excited To Bring Life With Code"]} typeSpeed={90} backSpeed={25} />
             </Typography>
         </Box>
