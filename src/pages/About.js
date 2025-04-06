@@ -1,4 +1,4 @@
-import { Box, Chip, Divider, Grid, IconButton, Stack, Tooltip, Typography, Zoom } from "@mui/material";
+import { Box, Chip, Divider, Grid, IconButton, Tooltip, Typography, Zoom } from "@mui/material";
 import ParticlesContainer from "../helpers/ParticlesContainer";
 import { green } from "@mui/material/colors";
 import { icons } from "../helpers/tooltip";
