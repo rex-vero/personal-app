@@ -6,7 +6,7 @@ import Typing from "../helpers/Typing";
 
 const About = () => {
     return (
-        <Box p={4}>
+        <Box p={1}>
             <ParticlesContainer particleColor={green[900]} animationType={'number'} />
             <Stack width={{ xs: '90vw', md: '30vw' }}>
                 <Typography variant="body1" color="#fff">
