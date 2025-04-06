@@ -8,6 +8,7 @@ import Home from '../../pages/Home';
 import About from '../../pages/About';
 import Resume from '../../pages/Resume';
 import Contact from '../../pages/Contact';
+import SideSnack from '../sidebar/SideSnack';
 
 const MainContent = () => {
     const { value, open } = useContext(DataContext);
@@ -18,7 +19,8 @@ const MainContent = () => {
         <>
             <Navbar />
             <DrawerTabs drawerOpen={open} />
-            <Stack alignItems={'center'} display={'flex'} >
+            <SideSnack />
+            <Stack alignItems={'center'} display={'flex'} justifyContent={'center'} height={'100vh'}>
                 <TabPanel value={value} index={0}>
                     <Home />
                 </TabPanel>

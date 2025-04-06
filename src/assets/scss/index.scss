@@ -9,6 +9,11 @@
   src: url('../font/adobemingstd-light.otf');
 }
 
+@font-face {
+  font-family: digit;
+  src: url('../font/Seven\ Segment.ttf');
+}
+
 html {
   font-family: main, Arial;
   scroll-behavior: smooth;

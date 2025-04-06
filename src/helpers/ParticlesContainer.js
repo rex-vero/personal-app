@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 import { initColorfulParticles, initNumberParticles, initSnowParticles, updateColorfulParticles, updateNumberParticles, updateSnowParticles, initLinkedParticles, updateLinkedParticles, drawLinks, initBubbleParticles, updateBubbleParticles } from './particles';
 
-const ParticlesContainer = ({ numParticles = 100, particleColor, backgroundColor = '#080808', animationType }) => {
+const ParticlesContainer = ({ numParticles = 100, particleColor, background = '#080808', animationType }) => {
     const canvasRef = useRef(null);
     const particles = useRef([]);
     const resizeCanvas = canvas => {
@@ -59,7 +59,7 @@ const ParticlesContainer = ({ numParticles = 100, particleColor, backgroundColor
                 ctx.translate(p.x, p.y);
                 ctx.rotate(p.angle || 0);
                 ctx.fillStyle = particleColor;
-                ctx.font = `${p.size}px monospace`;
+                ctx.font = `${p.size}px digit`;
                 ctx.fillText(p.value, 0, 0);
                 ctx.restore();
             } else if (animationType === 'error') {
@@ -102,8 +102,8 @@ const ParticlesContainer = ({ numParticles = 100, particleColor, backgroundColor
             gsap.ticker.remove(update);
             window.removeEventListener('resize', resizeCanvas);
         };
-    }, [animationType, numParticles]);
-    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%', display: 'block', background: backgroundColor }} />
+    });
+    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%', display: 'block', background }} />
 };
 
 export default ParticlesContainer;

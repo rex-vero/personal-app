@@ -2,10 +2,12 @@ import { keyframes } from "@emotion/react";
 
 export const blurAnimation = keyframes`
 0% {
-  filter: blur(10px);
+  filter: blur(20px);
+  opacity: 0;
 }
 100% {
   filter: blur(0);
+  opacity: 1;
 }
 `;
 export const floatAnimation = keyframes`

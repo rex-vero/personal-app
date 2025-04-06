@@ -8,7 +8,7 @@ const tabProps = index => ({
     id: `tabpanel-${index}`,
     value: index,
     'aria-controls': `tabpanel-${index}`,
-    sx: { '&.MuiTab-root': { 'm': 1, 'borderRadius': 2, 'backgroundColor': { 'xs': grey[800], 'md': grey[500] } } }
+    sx: { '&.MuiTab-root': { 'm': 1, 'borderRadius': 2, 'backgroundColor': { 'xs': grey[800], 'md': grey[400] } } }
 });
 export const tabsData = [
     { label: <Typography fontSize={13}>Home</Typography>, icon: <IoHome fontSize={24} />, ...tabProps(0) },
