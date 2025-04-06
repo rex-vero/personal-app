@@ -7,7 +7,7 @@ import Typing from "../../helpers/Typing";
 const Navbar = () => {
     const { setOpen } = useContext(DataContext);
     return (
-        <AppBar sx={{ display: { xs: 'block', md: 'none' } }} position="sticky">
+        <AppBar sx={{ display: { xs: 'block', md: 'none' } }} position="fixed">
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Typography>
                     <Typing strings={['Live Your Dreams!']} typeSpeed={100} />
