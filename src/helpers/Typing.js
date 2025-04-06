@@ -6,7 +6,7 @@ const Typing = ({ strings = [''], typeSpeed = 0, backSpeed = 0, backDelay = 0, l
     useEffect(() => {
         const animation = new Typed(typeEl.current, { strings, typeSpeed, backSpeed, backDelay, loop, showCursor })
         return () => animation.destroy();
-    }, [strings, typeSpeed, backSpeed, backDelay, loop, showCursor]);
+    }, []);
     return <span className={className} style={style} ref={typeEl} />
 }
 
