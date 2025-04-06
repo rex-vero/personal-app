@@ -5,7 +5,7 @@ import { blue, green, grey } from "@mui/material/colors";
 
 const Home = () => {
     return (
-        <Box textAlign={'center'}>
+        <Box textAlign={'center'} m={1}>
             <ParticlesContainer particleColor={blue[100]} animationType={'snow'} />
             <Typography color={grey[50]} variant="h4">
                 <Typing strings={['[{ "Mohammad Amin Ahmadi" }]']} typeSpeed={200} />
