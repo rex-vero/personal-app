@@ -8,7 +8,7 @@ const About = () => {
     return (
         <Box p={1}>
             <ParticlesContainer particleColor={green[900]} animationType={'number'} />
-            <Stack width={{ xs: '90vw', md: '30vw' }}>
+            <Grid sx={{ flexDirection: 'column' }} container>
                 <Typography variant="body1" color="#fff">
                     <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={20} />
                 </Typography>
@@ -16,7 +16,7 @@ const About = () => {
                 <Typography mt={5} variant="body1" color="#fff">
                     <Typing strings={["“Every line of code I write is not just syntax, it's a step toward creating something meaningful.”"]} typeSpeed={60} />
                 </Typography>
-            </Stack>
+            </Grid>
             <Box mt={6}>
                 <Typography variant="h5" color="#fff">
                     <Typing strings={['Things I Know:']} typeSpeed={200} showCursor />
