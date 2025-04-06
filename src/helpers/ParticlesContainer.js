@@ -102,8 +102,8 @@ const ParticlesContainer = ({ numParticles = 100, particleColor, background = '#
             gsap.ticker.remove(update);
             window.removeEventListener('resize', resizeCanvas);
         };
-    });
-    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -1, width: '100%', height: '100%', display: 'block', background }} />
+    }, []);
+    return <canvas ref={canvasRef} style={{ position: 'fixed', top: 0, left: 0, zIndex: -10, width: '100%', height: '100%', display: 'block', background }} />
 };
 
 export default ParticlesContainer;
