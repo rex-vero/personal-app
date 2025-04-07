@@ -1,7 +1,7 @@
 import { Box, Chip, Divider, Grid, IconButton, Tooltip, Typography, Zoom } from "@mui/material";
 import ParticlesContainer from "../helpers/ParticlesContainer";
 import { green } from "@mui/material/colors";
-import { icons } from "../helpers/tooltip";
+import { icons } from "../utils/tooltip";
 import Typing from "../helpers/Typing";
 
 const About = () => {
@@ -9,12 +9,12 @@ const About = () => {
         <Box p={1}>
             <ParticlesContainer particleColor={green[900]} animationType={'number'} />
             <Grid sx={{ flexDirection: 'column', width: { xs: 'auto', md: '30vw' } }} container>
-                <Typography variant="body1" color="#fff">
-                    <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={5} />
+                <Typography sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="#fff">
+                    <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={1} />
                 </Typography>
                 <Divider sx={{ mt: 5 }} />
-                <Typography mt={5} variant="body1" color="#fff">
-                    <Typing strings={["“Every line of code I write is not just syntax, it's a step toward creating something meaningful.”"]} typeSpeed={60} />
+                <Typography mt={5} sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="#fff">
+                    <Typing strings={["“Every line of code I write is not just syntax, it's a step toward creating something meaningful.”"]} typeSpeed={40} />
                 </Typography>
             </Grid>
             <Box mt={6}>

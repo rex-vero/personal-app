@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Sidebar from "../components/sidebar/Sidebar";
 import { Grid } from "@mui/material";
 import { grey } from "@mui/material/colors";
-import { blurAnimation } from "../helpers/Animations";
+import { blurAnimation } from "../utils/animations";
 
 const MainLayout = () => {
   return (

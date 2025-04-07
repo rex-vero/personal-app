@@ -3,7 +3,7 @@ import { cyan, grey } from "@mui/material/colors";
 import { useLayoutEffect } from "react";
 import { TbArrowBackUp } from "react-icons/tb";
 import { Link } from "react-router-dom";
-import { floatAnimation } from "../helpers/Animations";
+import { floatAnimation } from "../utils/animations";
 import ParticlesContainer from "../helpers/ParticlesContainer";
 
 const NotFound = () => {

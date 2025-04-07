@@ -7,7 +7,7 @@ const DrawerTabs = ({ drawerOpen }) => {
     const { setOpen } = useContext(DataContext);
     const mediaQuery = useMediaQuery('(min-width:900px)');
     return (
-        !mediaQuery && (<SwipeableDrawer transitionDuration={500} open={drawerOpen} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
+        !mediaQuery && (<SwipeableDrawer sx={{ '&.MuiModal-root': { backdropFilter: 'blur(2px)' } }} anchor="right" transitionDuration={250} open={drawerOpen} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
             <Box role="presentation" onClick={() => setOpen(false)}>
                 <Sidebar />
             </Box>

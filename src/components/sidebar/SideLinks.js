@@ -1,7 +1,7 @@
 import { Tabs, Tab } from '@mui/material';
 import { useContext } from 'react';
 import DataContext from '../../contexts/DataContext';
-import { tabsData } from './SideData';
+import { tabsData } from '../../utils/sideData';
 
 const SideLinks = () => {
     const { value, setValue } = useContext(DataContext);

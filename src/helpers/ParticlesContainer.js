@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { initColorfulParticles, initNumberParticles, initSnowParticles, updateColorfulParticles, updateNumberParticles, updateSnowParticles, initLinkedParticles, updateLinkedParticles, drawLinks, initBubbleParticles, updateBubbleParticles } from './particles';
+import { initColorfulParticles, initNumberParticles, initSnowParticles, updateColorfulParticles, updateNumberParticles, updateSnowParticles, initLinkedParticles, updateLinkedParticles, drawLinks, initBubbleParticles, updateBubbleParticles } from '../utils/particles';
 
 const ParticlesContainer = ({ numParticles = 100, particleColor, background = '#080808', animationType }) => {
     const canvasRef = useRef(null);
