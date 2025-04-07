@@ -21,3 +21,11 @@ export const floatAnimation = keyframes`
   transform: translateY(0);
 }
 `;
+export const modal = keyframes`
+from {
+   opacity: 0;
+}
+to {
+  opacity: 1;
+}
+`;

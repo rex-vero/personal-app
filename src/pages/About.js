@@ -3,14 +3,19 @@ import ParticlesContainer from "../helpers/ParticlesContainer";
 import { green } from "@mui/material/colors";
 import { icons } from "../utils/tooltip";
 import Typing from "../helpers/Typing";
+import { useState } from "react";
+import Modal from "../helpers/Modal";
 
 const About = () => {
+    const [modalData, setModalData] = useState(null);
+    const openModal = item => setModalData(item);
     return (
         <Box p={1}>
+            <Modal item={modalData} isClose={() => setModalData(null)} isOpen={modalData} />
             <ParticlesContainer particleColor={green[900]} animationType={'number'} />
             <Grid sx={{ flexDirection: 'column', width: { xs: 'auto', md: '30vw' } }} container>
                 <Typography sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="#fff">
-                    <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={1} />
+                    <Typing strings={["I'm a passionate Front-End Developer with strong expertise in React, Material-UI, Sass, HTML, CSS, Git, Bootstrap, and JavaScript. I build modern, responsive, and user-friendly interfaces that bring ideas to life. I'm always open to learning new technologies and pushing my limits because in the world of code, growth never stops."]} typeSpeed={3} />
                 </Typography>
                 <Divider sx={{ mt: 5 }} />
                 <Typography mt={5} sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="#fff">
@@ -21,9 +26,11 @@ const About = () => {
                 <Chip label={<Typing strings={['Things I Know:']} typeSpeed={200} showCursor />} />
                 <Grid container>
                     {icons.map((item, key) => (
-                        <Tooltip key={key} title={item.title} arrow slots={{ transition: Zoom }} slotProps={{ transition: { timeout: 300 } }}>
-                            <IconButton sx={{ transition: '.5s', '&.MuiIconButton-root:hover': { color: item.color } }}>{item.icon}</IconButton>
-                        </Tooltip>
+                        <Box key={key}>
+                            <Tooltip title={item.title} arrow slots={{ transition: Zoom }} slotProps={{ transition: { timeout: 300 } }}>
+                                <IconButton onClick={() => openModal(item)} sx={{ transition: '.5s', '&.MuiIconButton-root:hover': { color: item.color } }}>{item.icon}</IconButton>
+                            </Tooltip>
+                        </Box>
                     ))}
                 </Grid>
             </Box>
