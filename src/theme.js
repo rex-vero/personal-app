@@ -1,6 +1,7 @@
 import { createTheme } from "@mui/material";
 
-export const theme = createTheme({
+export const getTheme = (direction = 'ltr') => createTheme({
+    direction,
     palette: {
         mode: 'dark',
         primary: {
@@ -11,6 +12,6 @@ export const theme = createTheme({
         }
     },
     typography: {
-        fontFamily: 'main, Arial'
+        fontFamily: direction === 'ltr' ? 'main, Arial' : 'vazir, Arial'
     }
 });

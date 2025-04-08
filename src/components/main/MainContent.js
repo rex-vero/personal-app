@@ -9,12 +9,14 @@ import About from '../../pages/About';
 import Resume from '../../pages/Resume';
 import Contact from '../../pages/Contact';
 import SideSnack from '../sidebar/SideSnack';
+import { translations } from '../../utils/translations';
 
 const MainContent = () => {
-    const { value, open } = useContext(DataContext);
+    const { value, open, lang } = useContext(DataContext);
+    const { title } = translations[lang];
     useLayoutEffect(() => {
-        document.title = 'Personal App';
-    }, [])
+        document.title = title;
+    }, [title])
     return (
         <>
             <Navbar />

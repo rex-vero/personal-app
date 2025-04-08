@@ -14,7 +14,11 @@
   src: url('../font/Seven\ Segment.ttf');
 }
 
+@font-face {
+  font-family: vazir;
+  src: url('../font/Vazir.ttf');
+}
+
 html {
-  font-family: main, Arial;
   scroll-behavior: smooth;
 }

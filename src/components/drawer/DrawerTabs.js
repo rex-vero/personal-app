@@ -4,10 +4,10 @@ import { useContext } from "react";
 import DataContext from "../../contexts/DataContext";
 
 const DrawerTabs = ({ drawerOpen }) => {
-    const { setOpen } = useContext(DataContext);
+    const { setOpen, lang } = useContext(DataContext);
     const mediaQuery = useMediaQuery('(min-width:900px)');
     return (
-        !mediaQuery && (<SwipeableDrawer sx={{ '&.MuiModal-root': { backdropFilter: 'blur(2px)' } }} anchor="right" transitionDuration={250} open={drawerOpen} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
+        !mediaQuery && (<SwipeableDrawer sx={{ '&.MuiModal-root': { backdropFilter: 'blur(2px)' } }} anchor={lang === "fa" ? "left" : "right"} transitionDuration={250} open={drawerOpen} onOpen={() => setOpen(true)} onClose={() => setOpen(false)}>
             <Box role="presentation" onClick={() => setOpen(false)}>
                 <Sidebar />
             </Box>
