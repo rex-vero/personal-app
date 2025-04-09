@@ -1,7 +1,7 @@
 export const translations = {
     en: {
         title: 'Personal Website',
-        dream: 'Live Your Dreams!',
+        dream: ['Live Your Dreams!'],
         name: 'Mohammad Amin Ahmadi',
         job: 'Front-End Developer',
         learn: 'Always Learning',
@@ -25,7 +25,7 @@ export const translations = {
 
     fa: {
         title: 'وبسایت شخصی',
-        dream: 'رویا هایت را زندگی کن',
+        dream: ['رویا هایت را زندگی کن!'],
         name: 'محمدامین احمدی',
         job: 'توسعه گر فرانت اند',
         learn: 'همیشه درحال یادگیری',

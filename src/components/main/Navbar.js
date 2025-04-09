@@ -12,7 +12,7 @@ const Navbar = () => {
         <AppBar sx={{ display: { xs: 'block', md: 'none' } }} position="fixed">
             <Toolbar sx={{ justifyContent: 'space-between' }}>
                 <Typography>
-                    <Typing strings={[dream]} typeSpeed={100} />
+                    <Typing strings={dream} typeSpeed={100} />
                 </Typography>
                 <Fab sx={{ m: 1 }} size="small" aria-label="menu" onClick={() => setOpen(true)}>
                     <FiMenu style={{ fontSize: '20px' }} />
