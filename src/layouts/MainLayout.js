@@ -6,7 +6,7 @@ import { blurAnimation } from "../utils/animations";
 
 const MainLayout = () => {
   return (
-    <Grid container columns={12} sx={{ animation: `${blurAnimation} 1.5s ease-in-out`, height: '100vh' }}>
+    <Grid container columns={12} sx={{ animation: `${blurAnimation} 1.5s ease-in-out` }}>
       <Grid bgcolor={grey[500]} size={{ xs: 0, md: 2 }} sx={{ display: { xs: 'none', md: 'block' } }}>
         <Sidebar />
       </Grid>
