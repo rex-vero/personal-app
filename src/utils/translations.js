@@ -6,7 +6,7 @@ export const translations = {
         job: 'Front-End Developer',
         learn: 'Always Learning',
         textBtn: 'English',
-        fullName: ['[{ "Mohammad Amin Ahmadi" }]'],
+        fullName: ['Mohammad Amin Ahmadi'],
         titles: ["I'm Front-End Developer", "I'm Programer", "I'm Always Excited To Bring Life With Code"],
         tabs: ['Home', 'About Me', 'Resume', 'Contact Me'],
         msg: "I'm A Victom Of My Own Success!",
@@ -21,8 +21,11 @@ export const translations = {
         react: "I never thought I'd connect with React library this well, its simplicity and accessibility honestly amazed me. It showed me that moving forward is always worth it, and that I should make the most of the knowledge I've gained.",
         mui: "Since Bootstrap felt a bit outdated, I saw Material-UI as a great step forward to level up my design skills. One of its best strengths is the ready-to-use components with fast customization. honestly, it's amazing!",
         git: "To me, Git is essential. No matter your programming field. It's a free, cloud-based system for saving code, sharing it, and working as a team. Honestly, we have to admit… a lot of our problems are already solved because of it.",
+        download: 'Download Resume',
+        errTitle: 'Page Not Found',
+        error404: 'OOPS 404 ERROR!',
+        errText: "Couldn't Find The Page You Were Looking For.",
     },
-
     fa: {
         title: 'وبسایت شخصی',
         dream: ['رویا هایت را زندگی کن!'],
@@ -30,7 +33,7 @@ export const translations = {
         job: 'توسعه گر فرانت اند',
         learn: 'همیشه درحال یادگیری',
         textBtn: 'فارسی',
-        fullName: ['[{ "محمدامین احمدی" }]'],
+        fullName: ['محمدامین احمدی'],
         titles: ["من یک توسعه دهنده فرانت هستم", "من یک برنامه نویس هستم", "من همیشه آماده جان بخشیدن به کد هایم را دارم"],
         tabs: ['صفحه اصلی', 'درباره من', 'رزومه', 'ارتباط با من'],
         msg: "من قربانی موفقیت های خودم هستم!",
@@ -45,5 +48,9 @@ export const translations = {
         react: 'هرگز فکر نمی کردم که بتوانم به این خوبی با کتابخانه ری اکت ارتباط برقرار کنم، سادگی و دسترسی آن صادقانه مرا شگفت زده کرد. این به من نشان داد که حرکت رو به جلو همیشه ارزشش را دارد و باید از دانشی که به دست آورده‌ام نهایت استفاده را ببرم.',
         mui: 'از آنجایی که بوت استرپ کمی منسوخ شده بود، متریال یوآی را گامی عالی به جلو برای ارتقاء مهارت های طراحی خود دیدم. یکی از بهترین نقاط قوت آن، قطعات آماده برای استفاده با سفارشی سازی سریع است. صادقانه بگویم، شگفت انگیز است!',
         git: 'برای من، Git ضروری است. رشته برنامه نویسی شما مهم نیست. این یک سیستم رایگان و مبتنی بر ابر برای ذخیره کد، اشتراک گذاری آن و کار تیمی است. راستش را بخواهید، باید اعتراف کنیم که بسیاری از مشکلات ما به همین دلیل حل شده است.',
+        download: 'دانلود رزومه',
+        errTitle: 'صفحه یافت نشد',
+        error404: 'اوه خطای 404!',
+        errText: "صفحه ای که دنبالش بودی یافت نشد.",
     }
 };

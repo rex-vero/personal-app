@@ -46,7 +46,7 @@ export const updateColorfulParticles = (particles, canvas) => {
     });
 };
 
-let digits = '01';
+const digits = '01';
 export const initNumberParticles = (canvas, numParticles) => {
     const particles = [];
     for (let i = 0; i < numParticles; i++) {
