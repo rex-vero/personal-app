@@ -14,7 +14,7 @@ const Modal = ({ item, isOpen, isClose }) => {
                             <RxCross2 />
                         </IconButton>
                     </Box>
-                    <Stack alignItems={'center'} m={1}>
+                    <Stack alignItems={'center'} m={1.2}>
                         <Typography color={item.color} sx={{ fontSize: { xs: '5rem', md: '7rem' } }}>{item.icon}</Typography>
                         <Typography color={item.color} sx={{ textShadow: '0 0 1px #fff', fontSize: { xs: '1.2rem', md: '1.3rem' } }}>{item.description}</Typography>
                     </Stack>
