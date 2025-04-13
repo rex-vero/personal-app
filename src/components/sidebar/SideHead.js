@@ -9,7 +9,7 @@ const SideHead = () => {
     const { name, job, learn, textBtn } = translations[lang];
     return (
         <Stack display={'flex'} alignItems={'center'} gap={'5px'} textAlign={'center'} px={1}>
-            <Avatar sx={{ height: 100, width: 100 }} alt={name} src={avatar} />
+            <Avatar sx={{ height: 100, width: 100, border: '1px solid black' }} alt={name} src={avatar} />
             <Typography>{name}</Typography>
             <Typography variant="caption">{job}</Typography>
             <Chip label={learn} size="small" color="secondary" onClick={() => setSnackOpen(true)} />

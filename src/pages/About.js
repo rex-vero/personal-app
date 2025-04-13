@@ -4,14 +4,14 @@ import { green } from "@mui/material/colors";
 import Typing from "../helpers/Typing";
 import { FaBootstrap, FaCss3, FaGitAlt, FaHtml5, FaJs, FaReact, FaSass } from "react-icons/fa";
 import { SiMui } from "react-icons/si";
-import { useContext, useState } from "react";
+import { useContext, useLayoutEffect, useState } from "react";
 import Modal from "../helpers/Modal";
 import DataContext from "../contexts/DataContext";
 import { translations } from "../utils/translations";
 
 const About = () => {
     const { lang } = useContext(DataContext);
-    const { about, skill, quote, html, css, bootstrap, sass, js, react, mui, git } = translations[lang];
+    const { aboutMe, title, about, skill, quote, html, css, bootstrap, sass, js, react, mui, git } = translations[lang];
     const [modalData, setModalData] = useState(null);
     const openModal = item => setModalData(item);
     const icons = [
@@ -24,6 +24,9 @@ const About = () => {
         { title: 'Material-UI', icon: <SiMui />, color: '#007fff', description: mui },
         { title: 'Git', icon: <FaGitAlt />, color: '#f05033', description: git }
     ];
+    useLayoutEffect(() => {
+        document.title = `${title} - ${aboutMe}`;
+    }, [title, aboutMe]);
     return (
         <Box p={1}>
             <Modal item={modalData} isClose={() => setModalData(null)} isOpen={modalData} />

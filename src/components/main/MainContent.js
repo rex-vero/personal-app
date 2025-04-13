@@ -1,5 +1,5 @@
 import { Stack } from '@mui/material';
-import { useContext, useLayoutEffect } from 'react';
+import { useContext } from 'react';
 import TabPanel from '../../helpers/TabPanel';
 import DataContext from '../../contexts/DataContext';
 import DrawerTabs from '../drawer/DrawerTabs';
@@ -9,14 +9,9 @@ import About from '../../pages/About';
 import Resume from '../../pages/Resume';
 import Contact from '../../pages/Contact';
 import SideSnack from '../sidebar/SideSnack';
-import { translations } from '../../utils/translations';
 
 const MainContent = () => {
-    const { value, open, lang } = useContext(DataContext);
-    const { title } = translations[lang];
-    useLayoutEffect(() => {
-        document.title = title;
-    }, [title])
+    const { value, open } = useContext(DataContext);
     return (
         <>
             <Navbar />

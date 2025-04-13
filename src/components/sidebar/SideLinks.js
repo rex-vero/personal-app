@@ -24,7 +24,7 @@ const SideLinks = () => {
         { icon: <FaPhoneAlt fontSize={24} />, ...tabProps(3) }
     ];
     return (
-        <Tabs textColor='secondary' variant="fullWidth" value={value} onChange={(_, tabNewValue) => setValue(tabNewValue)} orientation='vertical' sx={{ mt: 5 }}>
+        <Tabs indicatorColor='secondary' textColor='secondary' variant="fullWidth" value={value} onChange={(_, tabNewValue) => setValue(tabNewValue)} orientation='vertical' sx={{ mt: 5 }}>
             {tabsData.map((item, key) => <Tab key={key} label={item.label} icon={item.label} {...item} />)}
         </Tabs>
     );
