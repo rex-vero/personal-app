@@ -6,14 +6,14 @@ import DataContext from "../contexts/DataContext";
 import { translations } from "../utils/translations";
 
 const Contact = () => {
-    const { lang } = useContext(DataContext);
+    const { lang, themeMode } = useContext(DataContext);
     const { title, contact } = translations[lang];
     useLayoutEffect(() => {
         document.title = `${title} - ${contact}`;
     }, [title, contact]);
     return (
         <Box>
-            <ParticlesContainer animationType={'color'} particleColor={lightBlue[700]} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} animationType={'color'} particleColor={lightBlue[700]} />
         </Box>
     );
 }

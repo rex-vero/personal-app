@@ -9,7 +9,7 @@ import DataContext from "../contexts/DataContext";
 import { translations } from "../utils/translations";
 
 const NotFound = () => {
-    const { lang } = useContext(DataContext);
+    const { lang, themeMode } = useContext(DataContext);
     const { errTitle, error404, errText } = translations[lang];
     useLayoutEffect(() => {
         document.title = errTitle;
@@ -18,7 +18,7 @@ const NotFound = () => {
     }, [errTitle])
     return (
         <Box height={'100vh'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
-            <ParticlesContainer animationType={'error'} numParticles={50} particleColor={cyan[700]} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} animationType={'error'} numParticles={50} particleColor={cyan[700]} />
             <Box boxShadow={'0 0 10px black'} borderRadius={4} display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{ backgroundColor: grey[900], p: 3, m: 2, animation: `${floatAnimation} 2s ease-in-out infinite` }}>
                 <Box>
                     <Typography variant="h3" color="textPrimary">{error404}</Typography>

@@ -6,12 +6,13 @@ import { getTheme } from './theme';
 import { ThemeProvider } from '@emotion/react';
 
 const App = () => {
-    const { lang } = useContext(DataContext);
+    const { lang, themeMode } = useContext(DataContext);
     const direction = lang === 'fa' ? 'rtl' : 'ltr';
+    const mode = themeMode === 'dark' ? 'light' : 'dark';
     useEffect(() => {
         document.documentElement.setAttribute("dir", direction);
     }, [direction]);
-    const theme = useMemo(() => getTheme(direction), [direction]);
+    const theme = useMemo(() => getTheme(direction, mode), [direction, mode]);
     return (
         <ThemeProvider theme={theme}>
             <RouterProvider router={routs} />

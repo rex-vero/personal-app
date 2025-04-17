@@ -10,7 +10,7 @@ import DataContext from "../contexts/DataContext";
 import { translations } from "../utils/translations";
 
 const About = () => {
-    const { lang } = useContext(DataContext);
+    const { lang, themeMode } = useContext(DataContext);
     const { aboutMe, title, about, skill, quote, html, css, bootstrap, sass, js, react, mui, git } = translations[lang];
     const [modalData, setModalData] = useState(null);
     const openModal = item => setModalData(item);
@@ -30,7 +30,7 @@ const About = () => {
     return (
         <Box p={1}>
             <Modal item={modalData} isClose={() => setModalData(null)} isOpen={modalData} />
-            <ParticlesContainer particleColor={green[900]} animationType={'number'} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} particleColor={green[900]} animationType={'number'} />
             <Grid sx={{ flexDirection: 'column', width: { xs: 'auto', md: '30vw' } }} container>
                 <Typography sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="#fff">
                     <Typing strings={about} typeSpeed={3} />

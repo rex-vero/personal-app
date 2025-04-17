@@ -1,9 +1,9 @@
 import { createTheme } from "@mui/material";
 
-export const getTheme = (direction = 'ltr') => createTheme({
+export const getTheme = (direction = 'ltr', mode = 'dark') => createTheme({
     direction,
     palette: {
-        mode: 'dark',
+        mode,
         primary: {
             main: '#607D8B'
         },

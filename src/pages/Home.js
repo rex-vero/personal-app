@@ -8,14 +8,14 @@ import { translations } from "../utils/translations";
 import Reveal from "../helpers/Reveal";
 
 const Home = () => {
-    const { lang } = useContext(DataContext);
+    const { lang, themeMode } = useContext(DataContext);
     const { title, titles, name } = translations[lang];
     useLayoutEffect(() => {
         document.title = title;
     }, [title]);
     return (
         <Box textAlign={'center'} m={1}>
-            <ParticlesContainer particleColor={blue[100]} animationType={'snow'} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} particleColor={blue[100]} animationType={'snow'} />
             <Typography color={grey[50]} sx={{ fontSize: { xs: '1.5rem', md: '3rem' } }}>
                 {'[{ "'}<Reveal text={name} lang={lang} duration={3.5} />{'" }]'}
             </Typography>
