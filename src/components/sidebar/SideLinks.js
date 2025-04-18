@@ -8,14 +8,14 @@ import { grey } from '@mui/material/colors';
 import { translations } from '../../utils/translations';
 
 const SideLinks = () => {
-    const { value, setValue, lang } = useContext(DataContext);
+    const { value, setValue, lang, themeMode } = useContext(DataContext);
     const { tabs } = translations[lang];
     const tabProps = index => ({
         label: <Typography fontSize={13}>{tabs[index]}</Typography>,
         id: `tabpanel-${index}`,
         value: index,
         'aria-controls': `tabpanel-${index}`,
-        sx: { '&.MuiTab-root': { 'm': 1, 'borderRadius': 2, 'backgroundColor': { 'xs': grey[800], 'md': grey[400] } } }
+        sx: { '&.MuiTab-root': { 'm': 1, 'borderRadius': 2, 'backgroundColor': themeMode === 'dark' ? grey[900] : grey[400] } }
     });
     const tabsData = [
         { icon: <IoHome fontSize={24} />, ...tabProps(0) },

@@ -5,7 +5,7 @@ export const getTheme = (direction = 'ltr', mode = 'dark') => createTheme({
     palette: {
         mode,
         primary: {
-            main: '#607D8B'
+            main: 'rgb(128, 128, 128)'
         },
         secondary: {
             main: '#757575'

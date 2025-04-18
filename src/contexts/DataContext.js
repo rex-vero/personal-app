@@ -7,9 +7,7 @@ export const DataProvider = ({ children }) => {
     const [snackOpen, setSnackOpen] = useState(false);
     const [lang, setLang] = useState('en');
     const [themeMode, setThemeMode] = useState('dark');
-    const setLanguage = () => setLang(prev => (prev === 'en' ? 'fa' : 'en'));
-    const handleTheme = () => setThemeMode(prev => (prev === 'dark' ? 'light' : 'dark'))
-    return <DataContext.Provider value={{ value, setValue, open, setOpen, snackOpen, setSnackOpen, lang, setLanguage, themeMode, handleTheme }}>{children}</DataContext.Provider>
+    return <DataContext.Provider value={{ value, setValue, open, setOpen, snackOpen, setSnackOpen, lang, setLang, themeMode, setThemeMode }}>{children}</DataContext.Provider>
 }
 
 export default DataContext;
