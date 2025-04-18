@@ -15,7 +15,7 @@ const Home = () => {
     }, [title]);
     return (
         <Box textAlign={'center'} m={1}>
-            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} particleColor={blue[100]} animationType={'snow'} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : 'rgb(158, 158, 158)'} particleColor={themeMode === 'dark' ? blue[100] : 'rgb(8, 8, 8)'} animationType={'snow'} />
             <Typography color={grey[50]} sx={{ fontSize: { xs: '1.5rem', md: '3rem' } }}>
                 {'[{ "'}<Reveal text={name} lang={lang} duration={3.5} />{'" }]'}
             </Typography>

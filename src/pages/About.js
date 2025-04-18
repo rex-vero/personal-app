@@ -30,7 +30,7 @@ const About = () => {
     return (
         <Box p={1}>
             <Modal item={modalData} isClose={() => setModalData(null)} isOpen={modalData} />
-            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} particleColor={green[900]} animationType={'number'} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : 'rgb(158, 158, 158)'} particleColor={green[900]} animationType={'number'} />
             <Grid sx={{ flexDirection: 'column', width: { xs: 'auto', md: '30vw' } }} container>
                 <Typography sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="#fff">
                     <Typing strings={about} typeSpeed={3} />

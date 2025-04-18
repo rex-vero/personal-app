@@ -13,7 +13,7 @@ const Contact = () => {
     }, [title, contact]);
     return (
         <Box>
-            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : '#1C1C1C'} animationType={'color'} particleColor={lightBlue[700]} />
+            <ParticlesContainer background={themeMode === 'dark' ? '#080808' : 'rgb(158, 158, 158)'} animationType={'color'} particleColor={lightBlue[700]} />
         </Box>
     );
 }

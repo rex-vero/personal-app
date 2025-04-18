@@ -8,7 +8,7 @@ import { ThemeProvider } from '@emotion/react';
 const App = () => {
     const { lang, themeMode } = useContext(DataContext);
     const direction = lang === 'fa' ? 'rtl' : 'ltr';
-    const mode = themeMode === 'dark' ? 'light' : 'dark';
+    const mode = themeMode === 'light' ? 'light' : 'dark';
     useEffect(() => {
         document.documentElement.setAttribute("dir", direction);
     }, [direction]);
