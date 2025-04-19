@@ -3,7 +3,8 @@ import { routs } from './routs';
 import { RouterProvider } from 'react-router-dom';
 import DataContext from './contexts/DataContext';
 import { getTheme } from './theme';
-import { ThemeProvider, useMediaQuery } from '@mui/material';
+import { useMediaQuery } from '@mui/material';
+import { ThemeProvider } from '@emotion/react';
 
 const App = () => {
     const { lang, themeMode, setThemeMode, setVerify } = useContext(DataContext);
@@ -19,8 +20,7 @@ const App = () => {
     useEffect(() => {
         document.documentElement.setAttribute("dir", direction);
     }, [direction]);
-    const mode = themeMode;
-    const theme = useMemo(() => getTheme(direction, mode), [direction, mode]);
+    const theme = useMemo(() => getTheme(direction, themeMode), [direction, themeMode]);
     return (
         <ThemeProvider theme={theme}>
             <RouterProvider router={routs} />
