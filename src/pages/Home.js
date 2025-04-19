@@ -20,7 +20,7 @@ const Home = () => {
                 {'[{ "'}<Reveal text={name} lang={lang} duration={3.5} />{'" }]'}
             </Typography>
             <Typography sx={{ fontSize: { xs: '1.1rem', md: '1.8rem' }, textShadow: '0 0 1px black' }} color={green[900]}>
-                <Typing loop strings={titles} typeSpeed={90} backSpeed={25} />
+                <Typing loop strings={titles} typeSpeed={100} backDelay={100} backSpeed={25} />
             </Typography>
         </Box>
     );

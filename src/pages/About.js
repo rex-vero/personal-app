@@ -32,11 +32,11 @@ const About = () => {
             <Modal item={modalData} isClose={() => setModalData(null)} isOpen={modalData} />
             <ParticlesContainer background={themeMode === 'dark' ? '#080808' : 'rgb(185, 185, 185)'} particleColor={green[900]} animationType={'number'} />
             <Grid sx={{ flexDirection: 'column', width: { xs: 'auto', md: '30vw' } }} container>
-                <Typography sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="text.primary">
+                <Typography fontWeight={100} sx={{ textShadow: '0 0 1px black', fontSize: { xs: '1rem', md: '1.2rem' } }} color="text.primary">
                     <Typing strings={about} typeSpeed={3} />
                 </Typography>
                 <Divider sx={{ mt: 5 }} />
-                <Typography mt={5} sx={{ fontSize: { xs: '1rem', md: '1.2rem' } }} color="text.primary">
+                <Typography fontWeight={100} mt={5} sx={{ textShadow: '0 0 1px black', fontSize: { xs: '1rem', md: '1.2rem' } }} color="text.primary">
                     <Typing strings={quote} typeSpeed={40} />
                 </Typography>
             </Grid>

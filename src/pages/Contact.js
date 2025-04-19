@@ -24,8 +24,8 @@ const Contact = () => {
     return (
         <>
             <ParticlesContainer background={themeMode === 'dark' ? '#080808' : 'rgb(185, 185, 185)'} animationType={'color'} particleColor={lightBlue[700]} />
-            <Box p={3} borderRadius={3} bgcolor={'rgba(214, 214, 214, 0.18)'} boxShadow={themeMode === 'dark' ? '0 0 10px white' : '0 0 10px black'} justifyItems={'center'} sx={{ backdropFilter: 'blur(5px)', animation: `${floatAnimation} 2s ease-in-out infinite` }}>
-                {!verify ? <HCaptcha languageOverride={lang} theme={themeMode} sitekey="56307bd4-fc66-4a5e-8110-c65605d0d14a" onVerify={handleVerify} /> : (
+            {!verify ? <HCaptcha languageOverride={lang} theme={themeMode} sitekey="56307bd4-fc66-4a5e-8110-c65605d0d14a" onVerify={handleVerify} /> : (
+                <Box p={3} borderRadius={3} bgcolor={'rgba(214, 214, 214, 0.18)'} boxShadow={themeMode === 'dark' ? '0 0 10px white' : '0 0 10px black'} justifyItems={'center'} sx={{ backdropFilter: 'blur(5px)', animation: `${floatAnimation} 2s ease-in-out infinite` }}>
                     <Stack alignItems={'center'}>
                         <Typography color="text.primary" variant="h5" textAlign={'center'}>{contactText}</Typography>
                         <Box>
@@ -38,8 +38,8 @@ const Contact = () => {
                             ))}
                         </Box>
                     </Stack>
-                )}
-            </Box>
+                </Box>
+            )}
         </>
     );
 }
