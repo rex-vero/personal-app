@@ -12,8 +12,10 @@ const App = () => {
     const direction = lang === 'fa' ? 'rtl' : 'ltr';
     useEffect(() => {
         setThemeMode(prefer ? 'dark' : 'light');
+    }, [setThemeMode, prefer]);
+    useEffect(() => {
         document.documentElement.setAttribute("dir", direction);
-    }, [direction, setThemeMode, prefer]);
+    }, [direction]);
     const mode = themeMode;
     const theme = useMemo(() => getTheme(direction, mode), [direction, mode]);
     return (
