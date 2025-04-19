@@ -19,10 +19,10 @@ const NotFound = () => {
     return (
         <Box height={'100vh'} display={'flex'} justifyContent={'center'} alignItems={'center'}>
             <ParticlesContainer background={themeMode === 'dark' ? '#080808' : 'rgb(185, 185, 185)'} animationType={'error'} numParticles={50} particleColor={cyan[700]} />
-            <Box boxShadow={'0 0 10px black'} borderRadius={4} display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{ backgroundColor: grey[900], p: 3, m: 2, animation: `${floatAnimation} 2s ease-in-out infinite` }}>
+            <Box boxShadow={themeMode === 'dark' ? '0 0 10px black' : '0 0 10px white'} borderRadius={4} display={'flex'} justifyContent={'center'} alignItems={'center'} sx={{ backgroundColor: themeMode === 'dark' ? grey[900] : grey[400], p: 3, m: 2, animation: `${floatAnimation} 2s ease-in-out infinite` }}>
                 <Box>
-                    <Typography variant="h3" color="textPrimary">{error404}</Typography>
-                    <Typography variant="h6" sx={{ mb: 3 }} color="textSecondary">{errText}</Typography>
+                    <Typography variant="h3" color="text.primary">{error404}</Typography>
+                    <Typography variant="h6" sx={{ mb: 3 }} color="text.primary">{errText}</Typography>
                     <Link to={'/'}>
                         <Button size="large" variant="contained" sx={{ borderRadius: 4 }}>
                             <TbArrowBackUp />

@@ -41,11 +41,11 @@ const About = () => {
                 </Typography>
             </Grid>
             <Box mt={6}>
-                <Chip label={<Typing strings={skill} typeSpeed={200} showCursor />} />
+                <Chip color="text.primary" label={<Typing strings={skill} typeSpeed={200} showCursor />} />
                 <Grid container mt={3}>
                     {icons.map((item, key) => (
                         <Tooltip key={key} title={item.title} arrow slots={{ transition: Zoom }} slotProps={{ transition: { timeout: 300 } }}>
-                            <IconButton onClick={() => openModal(item)} sx={{ transition: '.5s', '&.MuiIconButton-root:hover': { color: item.color } }}>{item.icon}</IconButton>
+                            <IconButton onClick={() => openModal(item)} sx={{ color: 'text.primary', transition: '.5s', '&.MuiIconButton-root:hover': { color: item.color } }}>{item.icon}</IconButton>
                         </Tooltip>
                     ))}
                 </Grid>
