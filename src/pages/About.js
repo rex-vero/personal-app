@@ -3,7 +3,7 @@ import ParticlesContainer from "../helpers/ParticlesContainer";
 import { green } from "@mui/material/colors";
 import Typing from "../helpers/Typing";
 import { FaBootstrap, FaCss3, FaGitAlt, FaHtml5, FaJs, FaReact, FaSass } from "react-icons/fa";
-import { SiMui } from "react-icons/si";
+import { SiMui, SiVite } from "react-icons/si";
 import { useContext, useLayoutEffect, useState } from "react";
 import Modal from "../helpers/Modal";
 import DataContext from "../contexts/DataContext";
@@ -11,7 +11,7 @@ import { translations } from "../utils/translations";
 
 const About = () => {
     const { lang, themeMode } = useContext(DataContext);
-    const { aboutMe, title, about, skill, quote, html, css, bootstrap, sass, js, react, mui, git } = translations[lang];
+    const { aboutMe, title, about, skill, quote, html, css, bootstrap, sass, js, react, vite, mui, git } = translations[lang];
     const [modalData, setModalData] = useState(null);
     const openModal = item => setModalData(item);
     const icons = [
@@ -21,6 +21,7 @@ const About = () => {
         { title: 'Sass', icon: <FaSass />, color: '#ce679a', description: sass },
         { title: 'JavaScript', icon: <FaJs />, color: '#f7df1e', description: js },
         { title: 'React', icon: <FaReact />, color: '#61dbfb', description: react },
+        { title: 'Vite', icon: <SiVite />, color: '#facc15', description: vite },
         { title: 'Material-UI', icon: <SiMui />, color: '#007fff', description: mui },
         { title: 'Git', icon: <FaGitAlt />, color: '#f05033', description: git }
     ];
